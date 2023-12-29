@@ -44,7 +44,7 @@ for (let button of lang_buttons) {
 
 
 		// Animate all the children
-		let divs = panel.querySelectorAll('.projects>.proj');
+		let divs = panel.querySelectorAll('.projects>a>.proj');
 		let timeout = 200;
 		for (let div of divs) {
 			setTimeout(() => div.classList.add('loaded'), timeout);

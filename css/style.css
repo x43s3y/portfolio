@@ -207,6 +207,10 @@ button {
     visibility: visible;
 }
 
+a {
+    text-decoration: none;
+}
+
 .proj {
     margin: 10px;
     min-width: 250px;
@@ -279,6 +283,7 @@ footer {
 .footer-container a {
     color: #F5F6F7;
     padding: 42px 16px;
+    margin-left: 30px;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -291,7 +296,7 @@ footer {
 
 .footer-icons {
     justify-content: space-between;
-    padding: 16px 64px 0px 0px
+    padding: 16px 64px 0px 0px;
 }
 
 .footer-icons ul {
@@ -300,4 +305,8 @@ footer {
 
 .footer-icons li {
     display: inline-block;
+}
+
+.footer-icons i{
+    font-size: 26px;
 }
