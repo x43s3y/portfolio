@@ -14,7 +14,10 @@ main {
     background-repeat: no-repeat;
 }
 
-
+.opening-page {
+    display: inline;
+    transition: all 0.2s ease;
+}
 
 .dot {
     transition: all 0.2s ease;
@@ -107,14 +110,16 @@ button {
     font-size: xx-large;
     border: none;
     background-color: transparent;
+    cursor:pointer;
 }
 
-.button {
+.down-button {
+    opacity: 1;
     width: fit-content;
     position: relative;
-    left: 42%;
+    margin: 5% auto;
     transition: all ease-in-out .2s;
-
+    cursor:pointer;
 }
 
 .lang-button {
@@ -263,6 +268,123 @@ a {
     transition: border-color 0s ease-out 0.25s, width 0.125s ease-out 0.25s, height 0.125s ease-out 0.325s, border-radius .5s ease-out 0.5s;
 }
 
+.second-page{
+    opacity: 1;
+    width: 100%;
+    height: 85vh;
+    background-color: #126900;
+    border-radius: 15%;
+    color: #F5F6F7;
+    align-items: center;
+    transition: all 0.2s ease;
+    justify-content: center;
+}
+
+.up-button{
+    opacity: 1;
+    position: relative;
+    width: fit-content;
+    transition: all ease-in-out .2s;
+    margin: 5% auto;
+    cursor: pointer;
+    color: #F5F6F7; 
+}
+
+.up-button>i{
+    transform: rotate(180deg);
+}
+
+.up-button>button {
+    color: #F5F6F7;
+}
+
+.container-second {
+    height: 75%;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card-second {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10%;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card-second > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card-second > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card-second > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card-second[for="c1"] {
+    background-image: url('../photos/Programming\ Basics\ -\ March\ 2021\ -\ Certificate.jpeg');
+}
+.card-second[for="c2"] {
+    background-image: url('./img2.jpeg');
+}
+.card-second[for="c3"] {
+    background-image: url('./img3.jpeg');
+}
+
 footer {
     text-align: center;
 }
@@ -303,4 +425,9 @@ footer {
 
 .footer-icons i{
     font-size: 26px;
+}
+
+
+.gone {
+    opacity: 0;
 }
