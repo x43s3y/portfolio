@@ -272,7 +272,7 @@ a {
     opacity: 1;
     width: 100%;
     height: 85vh;
-    background-color: #126900;
+    background-color: rgb(18, 105, 0);
     border-radius: 15%;
     color: #F5F6F7;
     align-items: center;
@@ -308,6 +308,8 @@ a {
 
 .card-second {
     width: 80px;
+    height: 100%;
+    background-color: #F5F6F7;
     border-radius: .75rem;
     background-size: cover;
     background-position: center;
@@ -323,6 +325,7 @@ a {
 
 .card-second > .row {
     color: white;
+    width: 100%;
     /* display: flex; */
     /* flex-wrap: nowrap; */
 
@@ -345,8 +348,8 @@ a {
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
-    height: 500px;
-    width: 520px;
+    height: 100%;
+    width: 100%;
     opacity: 0;
     transform: translateY(30px);
     transition-delay: .3s;
@@ -377,6 +380,11 @@ input:checked + label {
 input:checked + label .description {
     opacity: 1 !important;
     transform: translateY(0) !important;
+}
+
+input:not(:checked) + label {
+    filter: blur(8px);
+  -webkit-filter: blur(2px);
 }
 
 .card-second[for="c1"] {
@@ -422,7 +430,14 @@ input:checked + label .description {
     height: 100%;
 }
 
-.card-second[for="c3"] {
+object {
+    display: inline-block;
+    overflow: visible;
+    height: 100%;
+    width: 300%;
+}
+
+input#c3:not(:checked) + label {
     background-image: url('../photos/Screenshot\ 2024-01-03\ 163558.png');
 }
 
@@ -470,5 +485,5 @@ footer {
 
 
 .gone {
-    opacity: 0;
+    display: none;
 }

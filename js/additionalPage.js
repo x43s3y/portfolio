@@ -47,7 +47,7 @@ for (let i = 0; i < inputElts.length; i++) {
                 data: {
                   labels: xValues,
                   datasets: [{
-                    backgroundColor: "rgba(255,255,255,1)",
+                    backgroundColor: "rgb(18, 105, 0)",
                     data: yValues
                   }]
                 },
@@ -57,8 +57,14 @@ for (let i = 0; i < inputElts.length; i++) {
                     display: true,
                     text: "Your company"
                   },
+                  
                 }
               });
+        }
+        if (inputEl.id === 'c3') {
+            document.getElementsByTagName('object')[0].classList.remove('gone')
+        }else {
+            document.getElementsByTagName('object')[0].classList.add('gone')
         }
     });
 }
