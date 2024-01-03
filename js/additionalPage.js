@@ -33,8 +33,7 @@ for (let i = 0; i < inputElts.length; i++) {
                 const cert = allCert[j];
                 cert.addEventListener('click', () => {
                     let a = getComputedStyle(cert)
-                    let b = a.backgroundImage.slice(48);
-                    b = 'url("' + b;
+                    let b = a.backgroundImage
                     labelEl.style.backgroundImage = b;
                 });
             }
